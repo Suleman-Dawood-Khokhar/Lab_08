@@ -14,7 +14,8 @@ def welcome_message():
     #------------------------
     # Add your code here
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
+    print("Welcome to the Game !!!")
+    #raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 #---------------------------------------
     
@@ -31,7 +32,12 @@ def choose_category(categories):
     #------------------------
     # Add your code here
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
+    for i in range(len(categories)):
+        print(f"{i+1}{categories[i]}")
+    chosen = int(input("Enter the number of category : "))
+    return categories[chosen]
+        
+    #raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 
 #---------------------------------------
@@ -43,13 +49,16 @@ def display_score(score, round_number):
     Parameters:
     - score (int): The player's current score.
     - round_number (int): The current round number.
+    
 
     Returns: None
     """
     #------------------------
     # Add your code here
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
+    print(f"Your Score = {score}")
+    print(f"Your round number {round_number}")
+   # raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 
 #---------------------------------------
@@ -66,7 +75,8 @@ def game_over_message(final_score):
     #------------------------
     # Add your code here
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
+    print(f"Game Over, Your Final score is {final_score}")
+    #raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 
 #---------------------------------------
@@ -83,7 +93,10 @@ def run_game_rounds(categories):
     #------------------------
     # Add your code here
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
+    for i in range(1,6):
+        categories[i-1]
+        
+    #raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 
 #---------------------------------------
@@ -102,7 +115,11 @@ def validate_answer(player_answer, correct_answer):
     #------------------------
     # Add your code here
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
+    if player_answer == correct_answer:
+        return True
+    else:
+        return False
+    #raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 
 #---------------------------------------
@@ -121,7 +138,11 @@ def update_score(score, correct):
     #------------------------
     # Add your code here
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
+    if correct:
+        score+=1
+    else:
+        score+=0
+    #raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 
 #---------------------------------------
@@ -139,7 +160,9 @@ def next_round(round_number):
     #------------------------
     # Add your code here
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
+    round_number+=1
+    return round_number
+    #raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 
 #---------------------------------------
@@ -157,7 +180,12 @@ def check_game_over(incorrect_answers):
     #------------------------
     # Add your code here
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
+    if incorrect_answers>=3:
+        return True
+    else:
+        return False
+        
+    #raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 
 #---------------------------------------
@@ -172,7 +200,7 @@ def restart_or_exit():
     #------------------------
     # Add your code here
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
+    #raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 
 #---------------------------------------
